@@ -1,5 +1,17 @@
 .descriptionBlock {
-    padding: 10px;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.statusAndDataBlock {
+    flex-direction: column;
+    padding-left: 100px;
+    
+}
+
+.statusBlock {
+    padding-bottom: 20px;
 }
 
 .contact {

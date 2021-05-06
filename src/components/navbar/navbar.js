@@ -8,19 +8,19 @@ const Navbar = (props) => {
         <nav className="nav">
             <ul>
                 <li>
-                    <Link to="/profile">My Profile</Link>
+                    <Link to="/profile"><i class="far fa-user-circle"></i> My Profile</Link>
                 </li>
                 <li>
-                    <Link to="/messages">Messages</Link>
+                    <Link to="/messages"><i class="far fa-comment"></i> Messages</Link>
                 </li>
                 <li>
-                    <Link to="/users">Users</Link>
+                    <Link to="/users"><i class="fas fa-users"></i> Users</Link>
                 </li>
                 <li>
-                    <Link to="/todo">Todo List</Link>
+                    <Link to="/todo"><i class="fas fa-list-ul"></i> Todo List</Link>
                 </li>
                 <li>
-                <Link to="/weather">Weather</Link>
+                <Link to="/weather"><i class="fas fa-cloud"></i> Weather</Link>
                 </li>
             </ul>
         </nav>

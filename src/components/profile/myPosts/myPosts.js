@@ -33,9 +33,16 @@ const AddPostForm = ({handleSubmit}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            {createNewField(Textarea, "newPostText", [required], "Add post")}
             <div>
-                <button>Add Post</button>
+                <Field component="textarea"
+                    name="newPostText" 
+                    validate={[required]} 
+                    placeholder="What's new?"
+                    className="add-post-textarea"/>
+            </div>
+            {/* {createNewField(Textarea, "newPostText", [required], "Add post")} */}
+            <div>
+                <button className="btn btn-outline-dark">Add Post</button>
             </div>
         </form>
     )

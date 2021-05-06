@@ -24,14 +24,21 @@ const DescriptionUser = ({profile, status, updateStatus, isOwner, savePhoto, sav
     return (
         <div>
             <div className={styles.descriptionBlock}>
-                <ProfileAvatar profile={profile} isOwner={isOwner} savePhoto={savePhoto}/>
-                { editMode
-                    ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
-                    : <ProfileData goToEditMode={() => {setEditMode(true)} } profile={profile} isOwner={isOwner}/> }
+                <div className={styles.avatarBlock}>
+                    <ProfileAvatar profile={profile} isOwner={isOwner} savePhoto={savePhoto}/>
+                </div>
+                <div className={styles.statusAndDataBlock}>
+                    <div className={styles.statusBlock}>
+                        <ProfileStatus status={status} updateStatus={updateStatus}/>
+                    </div>
+                    <div>
+                        { editMode
+                        ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
+                        : <ProfileData goToEditMode={() => {setEditMode(true)} } profile={profile} isOwner={isOwner}/> }
+                    </div>
+               </div>
             </div>
-            <div>
-                <ProfileStatus status={status} updateStatus={updateStatus}/>
-            </div>
+            
         </div>
     )
 }
