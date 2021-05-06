@@ -6,21 +6,23 @@ import "./navbar.css";
 const Navbar = (props) => {
     return (
         <nav className="nav">
-            <div>
-                <Link to="/profile">My Profile</Link>
-            </div>
-            <div>
-                <Link to="/messages">Messages</Link>
-            </div>
-            <div>
-                <Link to="/users">Users</Link>
-            </div>
-            <div>
-                <Link to="/todo">Todo List</Link>
-            </div>
-            <div>
+            <ul>
+                <li>
+                    <Link to="/profile">My Profile</Link>
+                </li>
+                <li>
+                    <Link to="/messages">Messages</Link>
+                </li>
+                <li>
+                    <Link to="/users">Users</Link>
+                </li>
+                <li>
+                    <Link to="/todo">Todo List</Link>
+                </li>
+                <li>
                 <Link to="/weather">Weather</Link>
-            </div>
+                </li>
+            </ul>
         </nav>
     )
 }

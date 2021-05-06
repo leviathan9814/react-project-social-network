@@ -14,7 +14,7 @@ import Preloader from "../preloader/preloader";
 import './app.css';
 
 const MessagesContainer = React.lazy(() => import('../messages/messagesContainer'));
-const TodoListContainer = React.lazy(() => import('../todoList/todoListContainer'));
+const TodoList = React.lazy(() => import('../todoList/todo/todo'));
 const Weather = React.lazy(() => import('../weather/weather'));
 
 class App extends React.Component {
@@ -40,7 +40,7 @@ class App extends React.Component {
                                                     <MessagesContainer />
                                                   </React.Suspense>}/>
             <Route path="/todo" render={() => <React.Suspense fallback={<Preloader/>}>
-                                                <TodoListContainer />
+                                                <TodoList />
                                               </React.Suspense>}/>
             <Route path="/users" render={() => <UsersContainer/>}/>
             <Route path="/weather" render={() => <React.Suspense fallback={<Preloader/>}>

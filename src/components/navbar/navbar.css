@@ -1,16 +1,25 @@
 .nav {
-    grid-area: n;
-    background-color: burlywood;
-    width: 200px;
-  }
-  
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  .nav a:hover {
-    color: darkorange;
-  }
+  grid-area: n;
+  background-color: burlywood;
+  width: 200px;
+}
+
+ul {
+  display: grid;
+  grid-template-rows: repeat(5, 30px)
+}
+
+li {
+  list-style-type: none;
+}
+
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: darkorange;
+}
   
