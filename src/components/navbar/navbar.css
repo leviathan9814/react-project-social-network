@@ -1,0 +1,16 @@
+.nav {
+    grid-area: n;
+    background-color: burlywood;
+    width: 200px;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav a:hover {
+    color: darkorange;
+  }
+  

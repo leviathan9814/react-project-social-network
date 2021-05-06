@@ -1,0 +1,11 @@
+.loginBtn {
+    border: none;
+    padding: 6px 14px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.loginBtn:hover {
+    background-color:blanchedalmond
+}

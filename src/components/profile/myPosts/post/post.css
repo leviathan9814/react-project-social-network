@@ -1,0 +1,12 @@
+.post {
+    height: 100px;
+    border: 2px solid red;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.post img {
+    width: 5%;
+    border-radius: 50%;
+}
+

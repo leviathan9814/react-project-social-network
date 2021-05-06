@@ -1,0 +1,61 @@
+.header {
+    grid-area: h;
+    background-color: rgb(91, 190, 91);
+    width: 1200px;
+}
+
+.header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-search {
+    display: block;
+    width: 80%;
+    padding: 10px;
+
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 0px 16px 16px;
+    margin-top: -25px;
+
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+
+    color: #313131;
+    font-size: 16px;
+
+    transition: 0.4s ease;
+}
+
+
+.logout-btn {
+    border: none;
+    padding: 6px 14px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color:blanchedalmond
+}
+
+.login-btn {
+    background-color:rgb(233, 229, 229);
+    text-decoration: none;
+    border: none;
+    padding: 6px 14px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+
+.login-btn:hover {
+    background-color:blanchedalmond
+}
