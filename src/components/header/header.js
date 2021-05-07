@@ -12,8 +12,8 @@ const Header = (props) => {
                 <HeaderSearchReduxForm/>
                 {
                     props.isAuth 
-                    ? <div>{props.login} - <button className="logout-btn" onClick={props.logout}>Log out</button> </div>  
-                    : <Link className="login-btn" to="/login">Login</Link>
+                    ? <div>{props.login} - <button className="btn-logout" onClick={props.logout}>Log out</button> </div>  
+                    : <Link className="btn btn-outline-dark" to="/login">Sign in</Link>
                 }
             </div>
         </header>

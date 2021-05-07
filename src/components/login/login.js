@@ -20,8 +20,9 @@ const Login = ({login, isAuth, captchaUrl}) => {
     }
 
     return (
-        <div>
+        <div className={styles.loginForm}>
             <h1>Login</h1>
+            <h5>Use your account</h5>
             <LoginReduxForm onSubmit={onSubmit} captchaUrl={captchaUrl}/>
         </div>
     )
@@ -29,21 +30,21 @@ const Login = ({login, isAuth, captchaUrl}) => {
 
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
             {createNewField(Input, "email", [required], "email")}
             {createNewField(Input, "password", [required], "password", {type: "password"})}
-            {createNewField(Input, "rememberMe", null, null, {type: "checkbox"}, "remember Me")}
-            
+            {/* {createNewField(Input, "rememberMe", null, null, {type: "checkbox"})} remember me 
+             */}
             {captchaUrl && <img src={captchaUrl}/>}
             {captchaUrl && createNewField(Input, "captcha", [required], "Symbols from image")}
-            
+                
             {
                 error && <div className={style.formSummaryError}>
                     {error}
                 </div> 
             }
             <div>
-                <button>Login</button>
+                <button className="btn btn-outline-dark">Login</button>
             </div>
         </form>
     )

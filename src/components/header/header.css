@@ -12,6 +12,19 @@
     align-items: center;
 }
 
+.btn-logout {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-logout:hover {
+    color: #fff;
+    background-color: rgb(38, 38, 39);
+}
+
 .header-search {
     display: block;
     width: 80%;
@@ -32,33 +45,4 @@
     font-size: 16px;
 
     transition: 0.4s ease;
-}
-
-
-.logout-btn {
-    border: none;
-    padding: 6px 14px;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-.logout-btn:hover {
-    background-color:blanchedalmond
-}
-
-.login-btn {
-    background-color: #fff;
-    text-decoration: none;
-    border: none;
-    padding: 6px 14px;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 5px;
-}
-
-
-.login-btn:hover {
-    background-color:blanchedalmond
 }

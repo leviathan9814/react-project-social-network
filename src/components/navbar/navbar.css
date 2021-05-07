@@ -3,11 +3,13 @@
   background-color: #F4F4F4;
   width: 200px;
   border-radius: 16px 16px 0px 0px;
+  font-size: 18px;
 }
 
 ul {
   display: grid;
-  grid-template-rows: repeat(5, 30px)
+  grid-template-rows: repeat(8, 30px);
+  padding: 20px;
 }
 
 li {
