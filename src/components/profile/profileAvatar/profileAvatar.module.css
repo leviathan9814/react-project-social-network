@@ -5,8 +5,10 @@
 .inputWrapper {
     font-family: sans-serif;
     text-align: center;
-    display: flex
+    display: flex;
+    justify-content: center;
 }
+
 
 input[type="file"] {
     display: none;
@@ -17,4 +19,9 @@ input[type="file"] {
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
+}
+
+.customFileUpload:hover {
+    color: #fff;
+    background-color: rgb(38, 38, 39);
 }
