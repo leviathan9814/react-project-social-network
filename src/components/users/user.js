@@ -6,29 +6,29 @@ import styles from "./users.module.css";
 
 const User = ({user, followingInProgress, unfollow, follow}) => {
     return (
-        <div key={user.id}>
-            <span>
+        <div key={user.id} className={styles.userItem}>
+            <div>
                 <div>
                     <Link to={"/profile/" + user.id}>
                         <img src={user.photos.small != null ? user.photos.small : userPhoto}
                             className={styles.userPhoto}/>
                     </Link>
                 </div>
-                <div>
+                <div className={styles.userFollowed}>
                 {
                     user.followed
-                        ? <button disabled={followingInProgress
+                        ? <button className="btn btn-outline-dark" disabled={followingInProgress
                             .some(id => id === user.id)}
                                     onClick={() => {unfollow(user.id) }}>
                             Unfollow</button>
-                        : <button disabled={followingInProgress
+                        : <button className="btn btn-outline-dark" disabled={followingInProgress
                             .some(id => id === user.id)}
                                     onClick={() => { follow(user.id) }}>
                             Follow</button>
                 }
                 </div>
-            </span>
-            <span>
+            </div>
+            <div className={styles.userInfo}>
                 <span>
                     <div>{user.name}</div>
                     <div>{user.status}</div>
@@ -37,7 +37,7 @@ const User = ({user, followingInProgress, unfollow, follow}) => {
                     <div>location.country</div>
                     <div>location.city</div>
                 </span> */}
-            </span>
+            </div>
         </div>
     )
 }

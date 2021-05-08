@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
+import "./modal.css";
+
 Modal.setAppElement("#root");
 
 const ModalProfile = (props) => {
@@ -16,11 +18,11 @@ const ModalProfile = (props) => {
 
     return (
         <div>
-            <button onClick={openModal}>Open Modal</button>
+            <button className="btn btn-dark" onClick={openModal}>My CV</button>
             <Modal isOpen={isOpen} onRequestClose={closeModal}>
                 <h2>Modal</h2>
                 <p>body</p>
-                <button onClick={closeModal}>Close modal</button>
+                <button onClick={closeModal}>Close CV</button>
             </Modal>
         </div>
     )

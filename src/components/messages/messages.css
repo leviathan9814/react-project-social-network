@@ -1,8 +1,40 @@
 .messages {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+    display: flex;
 }
 
+.messages-items {
+    width: 350px;
+}
 
+.dialog-items{
+    width: 650px;
+}
 
+.line-dialogs {
+    border-left: 6px solid #fff;
+    min-height: 800px;
+}
 
+.add-message {
+    padding: 20px;
+}
+
+.add-message-textarea {
+    display: block;
+    height: 100px;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #fff;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}
+
+.btn-send {
+    padding: 10px 30px;
+    float: right;
+    margin-top: 10px;
+}

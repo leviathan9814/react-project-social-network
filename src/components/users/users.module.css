@@ -1,3 +1,19 @@
 .userPhoto {
     width: 200px;
 }
+
+.userItem {
+    margin-bottom: 40px;
+    border: 7px solid #F4F4F4;
+    border-radius: 20px;
+}
+
+.userFollowed {
+    display: flex;
+    justify-content: center;
+}
+
+.userInfo {
+    display: flex;
+    justify-content: center;
+}

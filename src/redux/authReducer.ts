@@ -39,11 +39,11 @@ type SetAuthUserDataType = {
     payload: SetAuthUserDataPayloadType
 }
 
-export const setAuthUserData = (userId: number, email: string, login: string, isAuth: boolean): SetAuthUserDataType => ({type: SET_USER_DATA, payload : {userId, email, login, isAuth}});
+export const setAuthUserData = (userId: number | null, email: string | null, login: string | null, isAuth: boolean): SetAuthUserDataType => ({type: SET_USER_DATA, payload : {userId, email, login, isAuth}});
 
 type GetCaptchaUrlSuccessType = {
     type: typeof GET_CAPTCHA_URL_SUCCESS,
-    captchaUrl: {captchaUrl: string}
+    payload: {captchaUrl: string}
 }
 
 export const getCaptchaUrlSuccess = (captchaUrl: string): GetCaptchaUrlSuccessType => ({type: GET_CAPTCHA_URL_SUCCESS, payload: {captchaUrl}});

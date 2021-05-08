@@ -1,7 +1,7 @@
 import React from "react";
 import MyPostContainer from "./myPosts/MyPostContainer";
 import DescriptionUser from "./descriptionUser/descriptionUser";
-import ModalProfile from "../modal/modal";
+
 
 import "./profile.css";
 
@@ -14,7 +14,6 @@ const Profile = (props) => {
                 updateStatus={props.updateStatus}
                 savePhoto={props.savePhoto}
                 saveProfile={props.saveProfile}/>
-            <ModalProfile/>
             <MyPostContainer/>
         </div>
     )

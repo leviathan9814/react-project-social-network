@@ -76,5 +76,7 @@
     height: 100%;
   }
   .active-content {
-    display: block;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
   }

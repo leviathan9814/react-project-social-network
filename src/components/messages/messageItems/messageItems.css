@@ -1,3 +1,25 @@
-.messages-items {
-    padding: 10px;
+.item {
+    display: flex;
+}
+
+.user-photo {
+    width: 20%;
+}
+
+.user-message-block {
+    margin: 10px;
+}
+
+.user-message-block:hover {
+    background-color: white;
+}
+
+.user-message-block a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.line-message {
+    border-bottom: 3px solid #fff;
 }

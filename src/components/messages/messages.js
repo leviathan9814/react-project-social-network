@@ -1,11 +1,12 @@
 import React from "react";
 import MessageItems from "./messageItems/messageItems";
 import DialogItems from "./dialogItems/dialogItems";
-import { reduxForm, reset} from "redux-form";
+import { reduxForm, reset, Field} from "redux-form";
 import {Redirect} from "react-router-dom";
 import {required} from "../../validators/validators";
 import { Textarea, createNewField } from "../formsControls/formsControls";
 
+import "./messages.css";
 
 const Messages = (props) => {
 
@@ -27,15 +28,18 @@ const Messages = (props) => {
     if (!props.isAuth) return <Redirect to="/login"/>
 
     return (
-        <div className="messages">
-            <div className="messages-items">
-                {messagesElem}
-            </div>
-            <div className="dialog-items">
-                {dialogsElem}
-            </div>
-            <div>
-                <AddMessageFormRedux onSubmit={addNewMessage}/>
+        <div>
+            <div className="messages">
+                <div className="messages-items">
+                    {messagesElem}
+                </div>
+                <div className="line-dialogs"></div>
+                <div className="dialog-items">
+                    {dialogsElem}
+                    <div>
+                        <AddMessageFormRedux onSubmit={addNewMessage}/>
+                    </div>
+                </div>
             </div>
             
         </div>
@@ -45,10 +49,11 @@ const Messages = (props) => {
 const AddMessageForm = ({handleSubmit}) => {
 
     return (
-        <form onSubmit={handleSubmit}>
-            {createNewField(Textarea, "newMessageBody", [required], "Enter your message")}
+        <form onSubmit={handleSubmit} className="add-message">
+            <Field component="textarea" name="newMessageBody" placeholder="Enter your message" className="add-message-textarea"/>
+            {/* {createNewField(Textarea, "newMessageBody", [required], "Enter your message")} */}
             <div>
-                <button>Add Message</button>
+                <button className="btn btn-outline-dark btn-send">Send</button>
             </div>
         </form>
     )

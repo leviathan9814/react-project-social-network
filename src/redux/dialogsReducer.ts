@@ -15,13 +15,13 @@ let initialState = {
         {id: 1, name: "Yura"},
         {id: 2, name: "Masha"},
         {id: 3, name: "Christina"},
-        {id: 4, name: "Bomko"}
+        {id: 4, name: "Roma"}
     ] as Array<MessageType>,
     dialogsData: [
         {id: 1, text: "Hi"},
         {id: 2, text: "I learning React"},
-        {id: 3, text: "Goodbye"},
-        {id: 4, text: "Fuck"}
+        {id: 3, text: "and Redux"},
+        {id: 4, text: "I looking for a job"}
     ] as  Array<DialogType>
 }
 

@@ -18,7 +18,7 @@ const ProfileAvatar = ({profile, isOwner, savePhoto}) => {
             { isOwner && <div className={styles.inputWrapper}>
                             <label className={styles.customFileUpload}>
                             <input type="file" multiple onChange={onMainPhotoSelected} />
-                            <i className="fa fa-cloud-upload" /> Сменить фото
+                            <i className="fa fa-cloud-upload" /> Change photo
                             </label>
                         </div>}
         </>

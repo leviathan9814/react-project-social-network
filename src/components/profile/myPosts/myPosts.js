@@ -42,7 +42,7 @@ const AddPostForm = ({handleSubmit}) => {
             </div>
             {/* {createNewField(Textarea, "newPostText", [required], "Add post")} */}
             <div>
-                <button className="btn btn-outline-dark">Add Post</button>
+                <button className="btn btn-outline-dark add-post">Add Post</button>
             </div>
         </form>
     )
