@@ -19,14 +19,14 @@ const Weather = React.lazy(() => import('../weather/weather'));
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.initializeApp();
-  }
+  // componentDidMount() {
+  //   this.props.initializeApp();
+  // }
 
   render() {
-    if(!this.props.initialized) {
-      return <Preloader/>
-    }
+    // if(!this.props.initialized) {
+    //   return <Preloader/>
+    // }
 
     return (
       <div className="app-wrapper">
