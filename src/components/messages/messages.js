@@ -25,7 +25,7 @@ const Messages = (props) => {
         dispatch(reset("dialogAddMessageForm"));
     }
 
-    if (!props.isAuth) return <Redirect to="/login"/>
+    // if (!props.isAuth) return <Redirect to="/login"/>
 
     return (
         <div>
