@@ -5,6 +5,7 @@ import { Redirect } from "react-router";
 import {reduxForm } from "redux-form";
 import {required} from "../../validators/validators";
 import { createNewField, Input } from "../formsControls/formsControls";
+import {message} from 'antd';
 
 import style from "../formsControls/formsControls.module.css";
 import styles from "./login.module.css";
@@ -29,6 +30,7 @@ const Login = ({login, isAuth, captchaUrl}) => {
 }
 
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
+
     return (
         <form onSubmit={handleSubmit} >
             {createNewField(Input, "email", [required], "email")}
@@ -39,9 +41,7 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
             {captchaUrl && createNewField(Input, "captcha", [required], "Symbols from image")}
                 
             {
-                error && <div className={style.formSummaryError}>
-                    {error}
-                </div> 
+                error && message.error('Incorrect Email or Password')
             }
             <div>
                 <button className="btn btn-outline-dark">Login</button>

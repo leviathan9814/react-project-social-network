@@ -1,29 +1,28 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
+import { Modal} from 'antd';
+import 'antd/dist/antd.css';
+import MyCV from "../../assets/images/my-cv.png";
 
 import "./modal.css";
 
-Modal.setAppElement("#root");
 
 const ModalProfile = (props) => {
-    const [isOpen, setIsOpen] = useState(false)
-
-    const openModal = () => {
-        setIsOpen(true)
-    }
-
-    const closeModal = () => {
-        setIsOpen(false)
-    }
+    const [visible, setVisible] = useState(false);
 
     return (
         <div>
-            <button className="btn btn-dark" onClick={openModal}>My CV</button>
-            <Modal isOpen={isOpen} onRequestClose={closeModal}>
-                <h2>Modal</h2>
-                <p>body</p>
-                <button onClick={closeModal}>Close CV</button>
-            </Modal>
+            <button className="btn btn-dark" onClick={() => setVisible(true)}>My CV</button>
+            <Modal
+            title="My CV"
+            centered
+            visible={visible}
+            onOk={() => setVisible(false)}
+            onCancel={() => setVisible(false)}
+            width={650}
+            height={300}
+        >
+            <img src={MyCV}/>
+      </Modal>
         </div>
     )
 }
