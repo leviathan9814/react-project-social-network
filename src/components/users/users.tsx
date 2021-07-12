@@ -2,14 +2,27 @@ import React, {useState} from "react";
 import Paginator from "../paginator/paginator";
 import User from "./user";
 import Preloader from "../preloader/preloader";
+import {UserType} from "../../types/types";
 
 import "./tabsUsers.css";
 
-const Users = ({users, totalUsersCount, pageSize, onPageChanged, currentPage, follow, isFetching, unfollow, followingInProgress}) => {
+type PropsType = {
+    users: Array<UserType>,
+    totalUsersCount: number,
+    pageSize: number,
+    onPageChanged: (pageNumber: number) => void,
+    currentPage: number,
+    follow: (userId: number) => void,
+    unfollow: (userId: number) => void,
+    isFetching: boolean,
+    followingInProgress: Array<number>
+}
+
+const Users: React.FC<PropsType> = ({users, totalUsersCount, pageSize, onPageChanged, currentPage, follow, isFetching, unfollow, followingInProgress}) => {
 
     const [toggleState, setToggleState] = useState(1);
 
-    const toggleTab = (index) => {
+    const toggleTab = (index: number) => {
         setToggleState(index);
     }
 
@@ -31,7 +44,7 @@ const Users = ({users, totalUsersCount, pageSize, onPageChanged, currentPage, fo
                         Followed users
                         </button>
                     </div>
-                    <div className="content-tabs">
+                    {/* <div className="content-tabs">
                         {!users.followed ?
                             <div className={toggleState === 1 ? "content active-content" : "content"}>
                             {
@@ -51,14 +64,14 @@ const Users = ({users, totalUsersCount, pageSize, onPageChanged, currentPage, fo
                             }
                             </div>
                         }
-                    </div>
-                    {/* {
+                    </div> */}
+                    {
                         users.map(user => <User user={user}
                                                 follow={follow}
                                                 unfollow={unfollow}
                                                 followingInProgress={followingInProgress}/>)
                                                 
-                    } */}
+                    }
                 </div>
             }
         </div>

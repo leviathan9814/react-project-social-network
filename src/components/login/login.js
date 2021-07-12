@@ -24,7 +24,9 @@ const Login = ({login, isAuth, captchaUrl}) => {
         <div className={styles.loginForm}>
             <h1>Login</h1>
             <h5>Use your account</h5>
-            <LoginReduxForm onSubmit={onSubmit} captchaUrl={captchaUrl}/>
+            <div className={styles.formField}>
+                <LoginReduxForm onSubmit={onSubmit} captchaUrl={captchaUrl}/>
+            </div>
         </div>
     )
 }

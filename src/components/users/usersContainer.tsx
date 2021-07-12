@@ -1,20 +1,37 @@
 import React from "react";
 import Users from "./users";
-import {follow, unfollow, toggleIsFollowingProgress, requestUsers} from "../../redux/usersReducer";
-import { connect } from "react-redux";
+import {follow, unfollow, requestUsers} from "../../redux/usersReducer";
+import { connect} from "react-redux";
 import {compose} from "redux";
-
 import {getUsers, getTotalUsersCount, getCurrentPage, getPageSize, getIsFetching, getFollowingInProgress} from "../../redux/selectors/usersSelectors";
+import {UserType} from "../../types/types";
+import {AppStateType} from "../../redux/store";
 
+type MapStatePropsType = {
+    currentPage: number,
+    pageSize: number,
+    isFetching: boolean,
+    totalUsersCount: number,
+    users: Array<UserType>,
+    followingInProgress: Array<number>
+}
 
-class UsersContainer extends React.Component {
+type MapDispatchPropsType = {
+    requestUsers: (currentPage: number, pageSize: number) => void,
+    unfollow: (userId: number) => void,
+    follow: (userId: number) => void
+}
+
+type PropsType = MapStatePropsType & MapDispatchPropsType;
+
+class UsersContainer extends React.Component<PropsType> {
 
     componentDidMount() {
         const {currentPage, pageSize} = this.props;
         this.props.requestUsers(currentPage, pageSize);
     }
 
-    onPageChanged = (pageNumber) => {
+    onPageChanged = (pageNumber: number) => {
         const {pageSize} = this.props;
         this.props.requestUsers(pageNumber, pageSize)
     }
@@ -30,7 +47,7 @@ class UsersContainer extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any): MapStatePropsType => {
     return {
         users: getUsers(state),
         totalUsersCount: getTotalUsersCount(state),
@@ -43,6 +60,5 @@ const mapStateToProps = (state) => {
 
 
 export default compose(
-    connect(mapStateToProps, {follow, unfollow,
-        toggleIsFollowingProgress, requestUsers})
+    connect<MapStatePropsType, MapDispatchPropsType, AppStateType>(mapStateToProps, {follow, unfollow, requestUsers})
 )(UsersContainer);

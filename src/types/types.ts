@@ -1,9 +1,8 @@
 export type PostType = {
-    id: number,
-    message: string,
+    id: number
+    message: string
     count: number
 }
-
 export type ContactsType = {
     github: string
     vk: string
@@ -14,24 +13,22 @@ export type ContactsType = {
     youtube: string
     mainLink: string
 }
-
 export type PhotosType = {
-    small: string | null,
+    small: string | null
     large: string | null
 }
-
 export type ProfileType = {
-    userId: number,
-    lookingForAJob: boolean,
-    lookingForAJobDescription: string,
-    fullName: string,
-    contacts: ContactsType,
+    userId: number
+    lookingForAJob: boolean
+    lookingForAJobDescription: string
+    fullName: string
+    contacts: ContactsType
     photos: PhotosType
 }
 
 export type UserType = {
-    id: number,
-    name: string,
-    status: string,
+    id: number
+    name: string
+    status: string
     photos: PhotosType
 }
